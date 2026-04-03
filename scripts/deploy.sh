@@ -3,7 +3,7 @@
 
   APP_DIR="/opt/todowebapi"
   APP_USER="appuser"
-  S3_BUCKET="TodoWebApi"
+  S3_BUCKET="todo-webapi-app-6f0571ee"
 
   echo "=== [1/6] Update system ==="
   apt-get update -y && apt-get upgrade -y
