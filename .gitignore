@@ -1,0 +1,13 @@
+# Binary & build output
+linux-x64/
+Binary-linux-x64.7z
+SOURCE TodoWebAPI.7z
+TodoWebAPI/obj/
+TodoWebAPI/bin/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
