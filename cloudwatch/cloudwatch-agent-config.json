@@ -1,0 +1,41 @@
+{
+    "agent": {
+      "metrics_collection_interval": 60,
+      "run_as_user": "root"
+    },
+    "logs": {
+      "logs_collected": {
+        "files": {
+          "collect_list": [
+            {
+              "file_path": "/var/log/todowebapi/app.log",
+              "log_group_name": "/todo-webapi/application",
+              "log_stream_name": "{instance_id}",
+              "timezone": "UTC"
+            },
+            {
+              "file_path": "/var/log/syslog",
+              "log_group_name": "/todo-webapi/system",
+              "log_stream_name": "{instance_id}-syslog",
+              "timezone": "UTC"
+            }
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "metrics_collected": {
+        "mem": {
+          "measurement": ["mem_used_percent"]
+        },
+        "disk": {
+          "measurement": ["disk_used_percent"],
+          "resources": ["/"]
+        }
+      },
+      "append_dimensions": {
+        "InstanceId": "${aws:InstanceId}"
+      }
+    }
+  }
+
